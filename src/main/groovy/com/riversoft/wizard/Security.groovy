@@ -3,6 +3,8 @@ package com.riversoft.wizard
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.http.HttpMethod
+import org.springframework.http.HttpStatus
 import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity
 import org.springframework.security.config.web.server.ServerHttpSecurity
@@ -40,16 +42,23 @@ class Security {
     @Bean
     SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity httpSecurity) {
         httpSecurity
+                .csrf().disable()
+                .authorizeExchange {
+                    it.pathMatchers(HttpMethod.POST, '/api/users').permitAll()
+                    it.anyExchange().authenticated()
+                }
                 .formLogin {
                     it.loginPage('/api/login')
-                    it.authenticationSuccessHandler { w,e -> Mono.fromCallable { w.exchange.response.statusCode = 200 } }
-                    it.authenticationFailureHandler { w,e -> Mono.fromCallable { w.exchange.response.statusCode = 401 } }
+                    it.authenticationSuccessHandler { w,e -> Mono.fromRunnable { w.exchange.response.statusCode = HttpStatus.OK } }
+                    it.authenticationFailureHandler { w,e -> Mono.fromRunnable { w.exchange.response.statusCode = HttpStatus.UNAUTHORIZED } }
                 }
                 .exceptionHandling {
-                    it.authenticationEntryPoint { w,e -> Mono.fromCallable { w.response.statusCode = 401 } }
+                    it.authenticationEntryPoint { w,e -> Mono.fromRunnable { w.response.statusCode = HttpStatus.UNAUTHORIZED } }
                 }
                 .logout {
-                    it.logoutUrl('/api/logout')
+                    it
+                            .logoutUrl('/api/logout')
+                            .logoutSuccessHandler { w,e -> Mono.fromRunnable { w.exchange.response.statusCode = HttpStatus.OK } }
                 }
                 .build()
     }

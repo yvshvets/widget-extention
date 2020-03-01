@@ -12,4 +12,6 @@ class User {
     String username
 
     String password
+
+    List<String> widgets = []
 }

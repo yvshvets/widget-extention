@@ -9,4 +9,8 @@ class WidgetModel {
     String author
 
     BigDecimal size
+
+    String id
+
+    boolean activated
 }

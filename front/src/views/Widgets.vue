@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <el-button @click="exit">Logout</el-button>
-    <el-card v-for="widget in widgets" :key="widget.name">
-      {{widget}}
-    </el-card>
+    <div class="content">
+      <widget-info class="widget-element" v-for="widget in widgets" :key="widget.name" :info="widget"
+                   @activate="activateHandler" @deActivate="deActivateHandler"/>
+    </div>
     <add-button @click="handleAddClick"/>
 
     <el-dialog :visible.sync="addForm.visible">
@@ -25,13 +26,14 @@
 </template>
 
 <script>
-import { logout } from '../components/auth'
+import { services } from '../service'
 import AddButton from '../components/AddButton'
-import { allWidget } from '../components/widget'
+import WidgetInfo from '../components/WidgetInfo'
 
 export default {
   name: 'Home',
   components: {
+    WidgetInfo,
     AddButton
   },
   data () {
@@ -46,13 +48,13 @@ export default {
   },
   methods: {
     load () {
-      allWidget()
+      services.widget.all()
         .then((response) => {
           this.widgets = response.data
         })
     },
     exit () {
-      logout().then(() => {
+      services.auth.logout().then(() => {
         this.$router.push('/login')
       })
     },
@@ -61,6 +63,16 @@ export default {
     },
     addHandle () {
       this.$refs.upload.submit()
+    },
+    activateHandler (name) {
+      services.widget.activate(name).then(() => {
+        this.load()
+      })
+    },
+    deActivateHandler (name) {
+      services.widget.deActivate(name).then(() => {
+        this.load()
+      })
     }
   },
   mounted () {
@@ -68,3 +80,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .widget-element {
+      margin: 10px;
+    }
+  }
+</style>

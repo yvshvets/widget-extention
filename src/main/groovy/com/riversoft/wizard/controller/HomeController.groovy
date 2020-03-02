@@ -24,7 +24,6 @@ class HomeController {
         userRepository
                 .findByUsername(createUserModel.username)
                 .map { Mono.error(new Exception("User with $it.username already exist")) }
-                .log()
                 .switchIfEmpty (
                         userRepository.save(new User(
                                 username: createUserModel.username,

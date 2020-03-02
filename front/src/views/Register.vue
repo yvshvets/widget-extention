@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { register } from '../components/auth'
+import { services } from '../service'
 
 export default {
   name: 'Register',
@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     registerHandle () {
-      register(this.form.username, this.form.password)
+      services.auth.register(this.form.username, this.form.password)
         .then(() => {
           this.$router.push('/')
         })

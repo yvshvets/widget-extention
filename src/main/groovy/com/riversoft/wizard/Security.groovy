@@ -45,6 +45,7 @@ class Security {
                 .csrf().disable()
                 .authorizeExchange {
                     it.pathMatchers(HttpMethod.POST, '/api/users').permitAll()
+                    it.pathMatchers('/api/widget/**').permitAll()
                     it.anyExchange().authenticated()
                 }
                 .formLogin {

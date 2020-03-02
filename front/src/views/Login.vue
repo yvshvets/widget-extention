@@ -33,7 +33,7 @@
 <script>
 
 import SocialButton from '../components/SocialButton'
-import { login } from '../components/auth'
+import { services } from '../service'
 
 export default {
   name: 'Login',
@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     loginHandle () {
-      login(this.form.username, this.form.password)
+      services.auth.login(this.form.username, this.form.password)
         .then(() => {
           this.$router.push('/')
         })

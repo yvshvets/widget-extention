@@ -13,5 +13,5 @@ class User {
 
     String password
 
-    List<String> widgets = []
+    Set<String> widgets = []
 }

@@ -4,7 +4,7 @@ import Login from '../views/Login'
 import Home from '../views/Home.vue'
 import Widgets from '../views/Widgets'
 import Register from '../views/Register'
-import { isAuth } from '../components/auth'
+import { services } from '../service'
 
 Vue.use(VueRouter)
 
@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/',
     name: 'root',
-    redirect: '/home'
+    redirect: '/widgets'
   },
   {
     path: '/home',
@@ -49,7 +49,7 @@ const router = new VueRouter({
 })
 
 function requireAuth (to, from, next) {
-  isAuth() ? next() : next('/login')
+  services.auth.isAuth() ? next() : next('/login')
 }
 
 export default router

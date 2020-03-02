@@ -1,0 +1,57 @@
+<template>
+  <el-card>
+    <div class="widget-info-wrapper">
+      <div class="image">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA4VBMVEUCaOL///8BaOIAaOQAVLgAYuEAZeIAXuAAYeGtxvIAZ+QAZOITcOQAXOD7/f/1+v7n8PymxfPu9P3x+P57pOxTk+rr7/YAYdwAXcUAYdIAV7ccc+Qwb7wAWNKNqteZtNy91PYlabrI2/cTX7lQhMEAUcbH1OgAWMrX5PmWuvE+eL7T3OxymNcAXNMgbdGmwN85fuYrd+Q1hedXluqiwfKBsPBqnOtgic+Tr9O9zuZKgtFppe0AULpnk8fc6vtJjOjC1vclb8qNs/CBqO1MgcBplMdYjuhxoeyNt/GSv/KSrtOD2fu0AAAT+UlEQVR4nO1dC3eiOrTW5BCQID7Q2h7GSp0+dNqp4IPO1Bl19F7tuf//B10SwAfyCBJtndW9ZjkWMPDl2+zs7CQ7ufzfLrn3foCjyyfC85dPhOcvnwjPXz4Rnr98Ijx/+UR4/nIQwtJ9r3X9+/bbl5ubr1+//kvkH/5Cy3XKv7n58u32f69bvfvS0RGq2sV96+nm191dUxIEjJAsw6OLLMsIYUGSmnd3v26eWvcXmnochOrFY+v18q4pyDCXAzAHQA54H9vf9w7EnkxxNQS5HJSF5t3lS+uxzA6SFeHF/fXrVRPDHEwLghdCH2gOoubVq0MlV4Ra7+n5O4IOeR9CIMTfn596Gj+EvRe9IecyVDxHDr2PnNzQX3qcED7eKo0PQ99GIGzot48cEKo/nh18fCqeI4fkw8H4/CPR5CQhfHxpEiP2QQXA5ksSjfEI1Z9/GpwrnndRjT8/42mMRaj2LhH84AgBvuzFQoxDWGo9yO+thwwiP7Ti3LkYhKXrK3ikiudbFLy6joEYjZACPA+JhRiNsHUFj1nxXIuCV63IdzEKodp74ORcnwJhDj5EmpsohD8vz8HIbES+/JkO4eMfBHnU7ak4BDn0J6LpD0eovjQ+riMTLrDxEq6n4Qh/NE9T8VyLav5gR/j4DM8QIXwO1dNQhLdnp6NEQOM3K8KeDk9W8TyLgnpYlzgEofbSOBdnZlccY1NlQuhQeMKK51lUKIn7CC+ezpRCQuLTfgRuH+H9s3zSiudZlPx8n4xQbX3PnfaxOBaV+3691+zvISy/ovdWtgyCXvfUdA/h4wM8ccXzLAo+7LX6QYRqq3mudoYIbO6paRCh9oJOXvE8i8KvwVh/EOHFJTxrhPAy+CIGEd7fHUl/AJSRILkiIPloYea7YHsRREheQ94VD2UsFkWg96e2vVqtbHva14FzBMtH4LB5nYDwCXOtUQCRVBT0+qjS7kzK1WpV0zTnszzptCujui4UJcSZTXSbgPBG5vbyEL0UBXNslFU1rPvtHC0bY1MQic7y4hDINwkIf0FOCCGSgVWvlEOg7Uq5UreAnH30wD/wKx6hxsnQQARMOwBPLWnVMpGqVtrltFyxTYA5tcN3geYigNAxpRw4lAVQ77Y3KErlTntW6M5H9mBQHwzs0bxbmLU75U2gWm1360BIcvlZnmrPmAYQ9prZ33soKHZhTZ86MYbzVd8CmLYTRMgXDKz+aj40Jut6KBdsRcjOI2gG+ogBhC0pczONoW2s8XWGtaUFBGHPmNDmUQDWsjbsrDEaNsSZ30OpFYvwWshKoDg1/FBCeWibCopp3QlMpJj20K+RqjEVs9IoBRrEAMLfQhYOAZRwxX+5OmMLIJQcEIEIAWvsE1mqYMmhOwOHQiDiFkB4izMghAjaniFTjX5RkPeiruFFOVQKxb7hvZGaDRGMvU/8AXwbi/Db4d1fIMO+4Stbv4hAGpsFAHIweupt9KF8uMFD32IRfglxFRk5RMpi4pJgDDBOWfHkA+OB4arAZKGggzmUv8QivDl0TA0IVsV9vHbtUKPvNDO1tltJFUs4lMWg27aH8EAOxan3bG8mltNXvPchY/PNq6epeCiH8Qi/HoYQigNXQ9t1gA55rPUHAnW3qiYDca8fx4bwazzCg/RLFkeukRhaKGtzBpE1pGVVR+JBrwyMR/gvi4sfOAAg6FJLX15hdKBqbX9HeEU9ALULNo4Qe1Hw3wSEqesMyIoLsDOV+HQPoDTtuBCVA1qNRIRpKx5AZUgBGqYEwq4+oOEBkklbVnWoRPo3p+NQzrkMFnSe8Q+sF1wWc6nfRd4cQtEFWFFQHCvpOCQvo1JxIYoRHlw0h//wRSiOKMAhAZiIEEnBpiTyagciNanqSOSL8J+UWioOqi6DLBEz3B+ZzK6K835TFqsDMd0jJSJMxaEwpQ19QYkx65vvxXZ+MhXYOCRkKPRd3PrJ6TlEJvU/DOInM4iDMN8xmXsvjqJSi9pm/wkRnhzKrh51LMbQgzQiCg1i5+rs3AdbHfcdSONLckQI4YJ4yeWpxKh3sk4utxEzwpw0Jd6NtoAporj8tBSgPn0JVyKz8RANqnTsTRyQVvRV7LO9BlT4cQghfUuGAoi/eru1qJNfzCFkupqWK9A2w4Ds40X8OJRs8oO2lcIMQIVYJs1M4f0gixozW2K/CS8OISIvoVZnbsPJh0yVrl1kaVu8D1Sn90HMswu4IRSpHX0DiXfeeVy3eRkLTFe7NQneyE8qYtjJY2opnpK4aMqmynneOblLNY1qu7VSmrKqNicOISBmRlvg5Kv97xAJAsY29fIKuszKYQ5g2igZgHG2HScOBfqkhsJu+CFYLhZLSXc7ft0Uy/1k6tpUbcYBBz4cQvemA5YxAPc/WZlPNG0ytGo0ljapC8wcAmHgVifbrFc+HAo28TUM9kFNABfueIbRd0Nphp6CfkTqs8xIIhcOISBev9rHMVW5+x2hsRsHLS3mFGqphkHk1cEDuE86oQkeLTOHLAhxnVJYjH2sre8Am2OgdN2upO4OMzmdDGaEoEhJrMd6+Dy1FIIuubbP7JpAUM5PVsAkwxLDohv2yHcBu7HBffZf8ODQbaE6G88kiUNprJIBNxut2hNbMt3xUG3qBz6SOQRFQnzbZImnc+AQyDZhYcUckJBFVzG1Qt8aKFB0Y9rUnWYUIIydH6g2S/iUA4cQEIetrMsJFe9/l72QOOF9riOALO+vFfvgi6wT4isgplfCzGHyM8sWudswx7jA1KF8s0agPJAAEAveH8r+BKyIomCOEF+25OSrOWip28uzWTulQDA25Zf7jkeK+t5flSJz5xnRvlqdwZ/NzqHbq+hsv/XxdslaTyfJq0OimDDnkajVBRb771o3UkpFBIlXZ+cQCkTphgqjmYBAtyq+mho04gHQwPu7zezYQhogrjKMLmfnEJmEjFpUED/IOLLbXWs6ox6Narp9EdmaeSSOcOQvAwdQjZirjZtwRA4lYrgnU8Yenmw5b2FnYa3ajrNWkd3igVzzrGunz9pTRDT4PE6OZmTnkHpQhhXVwds9AOGCYCkZtjmakP6yR4jb16dDhIyrcWlVbXmKh3OY+MyYthU7XnDk1UA2PTNTLfT75jrqCdDcmzpVXibrnfvggLYXOHGFeWYtlS2V9BDYYl8Avfklq9Xt9gX5yPOVHKPJkkj/S7USTVNmDnFddftqTObB2kwhnUy3B/kln8Q86TEwFOX2SdU6PjqHdMCQ0UBAcdMUlojZ3Iis+6c6jH0M1O/Q4cTEm2blsEha6zZxSpMrnppdT2YW2j4JxLnvrI4lJg5lnVinQvHYlgaI5D6GzJJSAumTdcHVlbR7Ulb8k2XANJANZTrqISbpdFYthZDoSgWHOZRI3BEkdTdTvQ1U3D0rFkf+ubkoS4GfhpQOcIG8H4ldrqwcQlL1pa4UchItK4Ut6ZrmFoV9c1jYlSn0ZwaXLbO7c6qyRCE0SV3HOE2UpGYqK4eI9NBL87DGAtc0skrEFefF8+bZUPlPHuY3J+l5I+e/peoQFrbP5rVaWICEmt9yYpQ9K4eo7yCs1kI4BLi2nQanOl1ullto0nI/Qd5A9jmeWIOdpRnhgTiJhFqd7teRLQ2eVkk/NmxoZRdhBWx1Cwc5I78nE+x3MdSuuHPeQRgCQiDVUJ3irAgTdECoE4T1kODsLodlZbVhrS2u9gE6zQTy+olOb7O2zTHhMOzWBGHYrblqKY2wl+uJHI6V9vq7NgWTfIiUlbrXcewsldkuwjAOKcKBcGwOB0wcdqTRptDh9h/b0oU07KYVln1lurUUKo7DwcfgUF0qG9Mx6Vsh6SqIlPvEEzNsfdVZ4A3n78wh03tYcUeIXbTzYiEfIQW0+s8GJALQ1uubw+riHd9DJlta7iubItvWNIJCRz9rAjLpUpLSoLh5Vx2ER7SlLO2hltAezqWNylVX2/oXlLZuez/quPFCH2Foe1jl0h4m6ECsT+M9bNuytxxSPIrJhqst1i3hYGNwS4swn0Y4jU9D/VI11C/1EWoLfdMtLE/NGApJS+iboXZxsUYYammoI398v5T2LRwLsW8JAF64zBnKfNNsDFE3DiCZU+UFOkrTdeg41NIAOhJ8/L6F2z+cwZD+ode3qCz7G5tR1vVRJVbedL+jOIM27VkYRmjfAgLiFHDoHyYg9Pr4ZkgfHwKdiAKGm/Kcfq+uxIoO8MBbzwXcAixdByGjPrLJqY+foANxcRo3S7yw1U/oIAiSssoDd7Qub1hFP818qCbi6YniNDTW5nSfoqpS1rfadze8FlWU/4GmZbKSy3pT5JiraWNxilgbjZeq89AwRo5MK6ltSquwhdEgnE4Fy9GNbsz0FYBJ6OoU8VIoeKOx4VXpziVypbwMjrtElY31ETE35cHOmoadq72RZyF7zDsJoTtuMTMjXAuo2OvGsJs8cdE74E03JiHHqKuRSUwpj3GLRJ1yx56W4a4FwOOB6Q0Xso8r5aDXF1bnkXqNlycbe4odPwSiUV7odUJzaS6zT10WvLH+8jRqQglanGz80H0RI8aAgTjJl9pTYE/yHT3N/Gjg6XY7gkR3DLh8kjFgdxx/Ej6OTxcc5NWKIpn9VEv7vfVT+fwofKge0eDracbx/bkYobN3sN+P/U9It1hPVvxOZOg8dyCfcC6GN5+mEjqfRvzPLaejy3H1HHKg6Pt6bRDmEeZoW8FlPk3yY3ktkxU2J8obTqMDTekQUgPm6qmw71x7tcplTlSyGnjz2kbSvppCQHRNNawUa1z8Uot+P3Ky38oAifQdTzavzZtnMAmZm0inuqoFi3Eqys6BTQS8AIPDbYAGcU42N9GfXxqyPkAcq8SQpmeQlKr4ztBkGSwZT8nx080vBbhOq3RvjjD16Coy4+yK4AHoRzFKcylwkmowrznCLI/l2pr9ed4kTDUsMliD0APr+RnuePHWSTzlOc+bSaMi5upLo5JRPDjrAIRe8L8d6CJBfPK5+v56Czuw3kIYzvS95KDMHAIvONyuBwL3/vKVU6638NbMzJRduy739SxZEB2Ic8Po9gPNEKTjUideMwPc5ZXaAu2eDMsNyM4hWZah6zhoqLx1T0nbanHm8MC1a4kC4J4SoP67rF1z/DPqRzJ049NwGHLSa3yH/NYfsj4WFIjulAap1pAegBANiLJomN8aUmaFctcBp8ggcJB4jeR7rAN2OjQ0qlYRsmysl3Q1FNxoce491nL7AbJFyswcaQSI1JN7p/X4jtmrucu5WXMqpOfQnWik1bjmVEjxWGnzYqRGeJy8GGmUyEsHMOOaQGkj2F20kCqpAff8NO6raOiBERgeHALkroqe9N8xP806x9CQKcdQKgFuhJR7jqH0eaLGJRciS56oFBz6eaJKY855og7N9aUO9ah5LochRDqdnaq+8c/1lVab/HxthpU1BfG2YMvLTPD++dpIb9iFODM3mWoycggkOpRG1wylLuqYeROXmfM4eyyIy4+UN9H5J8MuNTfaQuCS+1KgXd586Q3K0Y3QoRwemr907I6rVEwO+UtNd15jdXyU/KVZc9B27Mw5aL1R8mPloD08j7CX0aPUNdGBEWGCD5muwufb/SPlET48FzRe54JeZMgFvVjngo6azpIoCQi/hJgKJg5JDsCal897ZqOD8nkje+bN/6plyOeN4vN588nJrhn9InFxUvwY4KK3HPrIOdkz5tXPrfPqz6ailCKvviRO/R0/NDt3zLz6mfdGEIb+3NLJyMrJTHsjyDlr5E/YLA2FjHsj4Pi9Ea7ZY1rhsr2/RbVimwrE0fsdOegwVEx7nZGAx/4WQvz+Frz3KJlURksTCBKSN0F5lzkoI0kA5nJRWc+3PckeJT0OO+eRfWYqW9OE25V5bWoCtLPPDALmtDYftrcWnlS47DMDE/aZ4bNXEBTA8m1rryBV67RnRnc+X9SJLOZvXWPW7mhbV7TflkCAKe8TdiBpryCu+z0NdxYV5tVSSaP7PWml4H5PQ9vh+DT7PeV/ZX4PvQN0+xjmPbsQtz27YMKeXdz3XZPMcSFm37XC2JROvO/aLd+Bls3eebPA3nmzI+2dh58SEJ7//oetBIR//x6Wf/8+pNorPmuEKHEvWfX6b98P+O/f0zl/8dfvy61e/+17q+fvn5M2y/y4COXnYFsRhvDiqXGutgY2nvaUNARhvqczziD7cBxCvbcPJwRh9eVMSYSNl5Bl4yEI8z3GmZwfjcNQCkMR5m8bx/IajymgEdySOxrh4zPTjOoPxiF83mvtIxHmfzTPEGHzRyiWcITqy9npqWNmwgIJUQjzj3/QaSqeW1HoT6iORiLM/7w8dJztfUS+/BmBJAqh2ntgnwbx/hzCh164jkYjzKutK6YkrB8CIbwKRmcYEOZL11fn4trAq+tSJI5ohC7Ec+AwFmAcwnyp9XAO5kZ+aMUAjEXomJvL7NH2I3MI0GWkkUlGmFd//ml8cISNPz9jASYgdJr+l+bRgrfZBcDmS0RDz4wwr/54biQtqnonDiFsPP9fPIEsCB0ab/VGig2oTiUOPv13EoFsCJ0u8YvekHN8Kp4Th46nrb+EdXgPQ5jXek/P3/GHIRJC9P35qReT6S41wnz+4r71etXEMAffmUPnCXDz4fX6fj+qlg2hY3LKj63Xy7umQLZwAJzc8hRXE5MOZdy8u3y9frxINDAHICQgNYfKp5tfd3dNSRAwkknisaOLcxeEBUFq3t39unlq3V9o7PDSIvSldN9rXf/+n29fbm6+fv36L5F/+Ast1yn/5ubLt//5fd3q3cc5Z3wRnpV8Ijx/+UR4/vKJ8PzlE+H5yyfC85dPhOcvfz/C/wdTpBbaX+2uFQAAAABJRU5ErkJggg==">
+      </div>
+      <div class="info">
+        <el-button class="activate" size="small" type="primary" v-if="!info.activated" @click="activateHandler">Активировать</el-button>
+        <div class="text">{{info.name}}</div>
+        <div class="text">author: {{info.author}}</div>
+        <div class="text">size: {{info.size}} kb</div>
+        <el-button v-if="info.activated" @click="deActivateHandler">Деактивировать</el-button>
+      </div>
+    </div>
+  </el-card>
+</template>
+<script>
+export default {
+  name: 'WidgetInfo',
+  props: {
+    info: {
+      type: Object
+    }
+  },
+  methods: {
+    activateHandler () {
+      this.$emit('activate', this.info.id)
+    },
+    deActivateHandler () {
+      this.$emit('deActivate', this.info.id)
+    }
+  }
+}
+</script>
+<style lang="scss" scoped>
+
+  .widget-info-wrapper {
+    display: flex;
+    flex-direction: row;
+    .image {
+      flex: 50%;
+    }
+    .info {
+      flex: 50%;
+      text-align: left;
+
+      div {
+        padding: 10px;
+      }
+
+      .activate {
+        float: right;
+        margin: 20px 0;
+      }
+    }
+  }
+</style>

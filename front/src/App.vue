@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <widget-manager />
     <router-view/>
   </div>
 </template>
@@ -26,3 +27,9 @@
   }
 }
 </style>
+<script>
+import WidgetManager from './components/WidgetManager'
+export default {
+  components: { WidgetManager }
+}
+</script>

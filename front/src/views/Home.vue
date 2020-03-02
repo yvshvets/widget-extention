@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import { logout } from '../components/auth'
+import { services } from '../service'
 
 export default {
   name: 'Home',
   methods: {
     exit () {
-      logout()
+      services.auth.logout()
         .then(() => {
           this.$router.push('/login')
         })

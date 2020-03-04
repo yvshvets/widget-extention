@@ -1,6 +1,6 @@
 package com.riversoft.wizard.service
 
-import com.riversoft.wizard.User
+
 import com.riversoft.wizard.UserRepository
 import com.riversoft.wizard.model.WidgetModel
 import groovy.util.logging.Slf4j
@@ -8,13 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.http.codec.multipart.FilePart
 import org.springframework.stereotype.Service
-import reactor.core.publisher.EmitterProcessor
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import reactor.core.publisher.MonoProcessor
 
 import java.math.RoundingMode
-import java.time.Duration
 
 @Slf4j
 @Service
@@ -78,11 +75,10 @@ class WidgetService {
                 }
     }
 
-    Flux<String> myWidgets(String username) {
+    Mono<List<String>> myWidgets(String username) {
         userRepository
                 .findByUsername(username)
-                .map { it.widgets }
-                .flatMapIterable { it } as Flux<String>
+                .map { it.widgets.toList() as List<String> }
     }
 
     String getContent(String username, String id) {

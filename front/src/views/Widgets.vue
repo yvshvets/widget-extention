@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <nav-bar />
     <el-button @click="exit">Logout</el-button>
     <div class="content">
       <widget-info class="widget-element" v-for="widget in widgets" :key="widget.name" :info="widget"
@@ -29,10 +30,12 @@
 import { services } from '../service'
 import AddButton from '../components/AddButton'
 import WidgetInfo from '../components/WidgetInfo'
+import NavBar from '../components/NavBar'
 
 export default {
   name: 'Home',
   components: {
+    NavBar,
     WidgetInfo,
     AddButton
   },

@@ -48,7 +48,7 @@ class WidgetController {
     }
 
     @GetMapping('/my')
-    Flux<String> myWidgets(Authentication authentication) {
+    Mono<List<String>> myWidgets(Authentication authentication) {
 
         widgetService.myWidgets(authentication.name)
     }
